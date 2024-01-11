@@ -1,0 +1,26 @@
+{% extends "studbud/base.html" %}
+
+{% block content %}
+<style>
+    
+    .profile-container{
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+</style>
+<h1> hello @{{user.username}}</h1>
+
+<div class="profile-container">
+    <div>
+        {% include "studbud/topics_components.html" %}
+    </div>
+
+    <div>
+        {% include "studbud/feed_components.html" %}
+    </div>
+
+    <div>
+        {% include "studbud/activity_components.html" %}
+    </div>
+</div>
+{% endblock %}

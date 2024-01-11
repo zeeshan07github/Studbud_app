@@ -1,0 +1,15 @@
+{% extends "studbud/base.html" %}
+
+{% block content %}
+
+<form action="" method="post">
+    {% csrf_token %}
+    
+    Are you sure you want to delete <b>'{{obj}}'</b>?
+    <br>
+    <a href="{{request.META.HTTP_REFERER}}">Go back</a>
+    <input type="submit" value="Confirm">
+
+</form>
+    
+{% endblock %}
